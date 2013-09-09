@@ -1,0 +1,21 @@
+{
+  "name": "fauxparse",
+  "description"     : "Personal website",
+  "author"          : "Matt Powell <fauxparse@gmail.com>",
+  "version"         : "0.0.1",
+  "engines": {
+    "node"          : "0.10.x",
+    "npm"           : "1.2.x"
+  },
+  "dependencies": {
+    "coffee-script" : "*",
+    "express"       : "3.x",
+    "ejs"           : "*",
+    "spine"         : "*",
+    "ntwitter"      : "*",
+    "instagram"     : "*",
+    "timezone"      : "*",
+    "redis"         : "*",
+    "lodash"        : "*"
+  }
+}
