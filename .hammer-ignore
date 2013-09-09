@@ -6,3 +6,4 @@ shows.json
 node_modules/.bin/*
 lib
 *.ai
+dump.rdb

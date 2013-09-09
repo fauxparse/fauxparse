@@ -18,6 +18,7 @@ class SlideShow
       .html("&times;")
       .appendTo(@el)
       .on("click", @hide)
+    $(window).on "resize", @resize
     
   show: (index) ->
     if @showing
@@ -51,12 +52,10 @@ class SlideShow
       .attr("src", @from.eq(index).attr("href"))
       .appendTo(@pages)
       .wrap("<div class=\"loading page\" data-index=\"index\">")
-      .hide()
       .on "load", ->
         img = $(this)
         img
           .css(marginLeft: -img.width() / 2, marginTop: -img.height() / 2)
-          .fadeIn()
           .parent().removeClass("loading").end()
     @images[index].parent()
     
@@ -70,7 +69,6 @@ class SlideShow
   thumbnailClicked: (e) =>
     if e?.target
       e.preventDefault()
-      console.log @from.index($(e.target).closest("a"))
       index = @from.index($(e.target).closest("a"))
       @show index
     else
@@ -87,6 +85,10 @@ class SlideShow
   after: (timeout, callback) -> setTimeout callback, timeout
   
   immediately: (callback) -> @after 0, callback
+  
+  resize: =>
+    for own _, img of @images
+      img.css(marginLeft: -img.width() / 2, marginTop: -img.height() / 2)
 
 $ ->
   $(window)

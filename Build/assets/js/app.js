@@ -5,6 +5,7 @@
 
   SlideShow = (function() {
     function SlideShow() {
+      this.resize = __bind(this.resize, this);
       this.keypress = __bind(this.keypress, this);
       this.thumbnailClicked = __bind(this.thumbnailClicked, this);
       this.hide = __bind(this.hide, this);
@@ -33,6 +34,7 @@
         href: "#",
         rel: "close"
       }).html("&times;").appendTo(this.el).on("click", this.hide);
+      $(window).on("resize", this.resize);
     }
 
     SlideShow.prototype.show = function(index) {
@@ -83,13 +85,13 @@
 
     SlideShow.prototype.load = function(index) {
       var _base;
-      (_base = this.images)[index] || (_base[index] = $("<img>").attr("src", this.from.eq(index).attr("href")).appendTo(this.pages).wrap("<div class=\"loading page\" data-index=\"index\">").hide().on("load", function() {
+      (_base = this.images)[index] || (_base[index] = $("<img>").attr("src", this.from.eq(index).attr("href")).appendTo(this.pages).wrap("<div class=\"loading page\" data-index=\"index\">").on("load", function() {
         var img;
         img = $(this);
         return img.css({
           marginLeft: -img.width() / 2,
           marginTop: -img.height() / 2
-        }).fadeIn().parent().removeClass("loading").end();
+        }).parent().removeClass("loading").end();
       }));
       return this.images[index].parent();
     };
@@ -111,7 +113,6 @@
       var index;
       if (e != null ? e.target : void 0) {
         e.preventDefault();
-        console.log(this.from.index($(e.target).closest("a")));
         index = this.from.index($(e.target).closest("a"));
         return this.show(index);
       } else {
@@ -135,6 +136,21 @@
 
     SlideShow.prototype.immediately = function(callback) {
       return this.after(0, callback);
+    };
+
+    SlideShow.prototype.resize = function() {
+      var img, _, _ref, _results;
+      _ref = this.images;
+      _results = [];
+      for (_ in _ref) {
+        if (!__hasProp.call(_ref, _)) continue;
+        img = _ref[_];
+        _results.push(img.css({
+          marginLeft: -img.width() / 2,
+          marginTop: -img.height() / 2
+        }));
+      }
+      return _results;
     };
 
     return SlideShow;

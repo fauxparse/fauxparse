@@ -94,7 +94,7 @@ p.lead {
 }
 
 #intro {
-  h2:after {
+  h2::after {
     content: "≡";
     display: block;
   }
@@ -125,7 +125,7 @@ p.lead {
     }
   }
   
-  &:before {
+  &::before {
     content: "";
     @include circle($BLUE, url(icons.png), 0%);
     margin: 2em auto 0;
@@ -179,7 +179,7 @@ p.lead {
     }
   }
   
-  &:before {
+  &::before {
     content: "";
     @include circle($PINK, url(icons.png), 50%);
     margin: 2em auto 0;
@@ -191,7 +191,7 @@ p.lead {
   padding-bottom: 4em;
   overflow: hidden;
   
-  &:before {
+  &::before {
     content: "";
     @include circle($YELLOW, url(icons-black.png), 100%);
     opacity: 0.85;
@@ -206,26 +206,40 @@ p.lead {
   }
 }
 
-.classname {
-  -webkit-animation: cssAnimation 1.5s infinite ease;
+@-webkit-keyframes loading {
+  0%   { -webkit-transform: rotate(0deg); }
+  10%  { -webkit-transform: rotate(0deg) scale(0.85); }
+  20%  { -webkit-transform: rotate(0deg) scale(1); }
+  90%  { -webkit-transform: rotate(360deg) scale(1); }
+  100% { -webkit-transform: rotate(360deg) scale(1); }
 }
 
-@-webkit-keyframes loading {
-  0% { -webkit-transform: rotate(0deg); }
-  10% { -webkit-transform: rotate(0deg) scale(0.85); }
-  20% { -webkit-transform: rotate(0deg) scale(1); }
-  90% { -webkit-transform: rotate(360deg) scale(1); }
-  100% { -webkit-transform: rotate(360deg) scale(1); }
+@-moz-keyframes loading {
+  0%   { -moz-transform: rotate(0deg); }
+  10%  { -moz-transform: rotate(0deg) scale(0.85); }
+  20%  { -moz-transform: rotate(0deg) scale(1); }
+  90%  { -moz-transform: rotate(360deg) scale(1); }
+  100% { -moz-transform: rotate(360deg) scale(1); }
+}
+
+@keyframes loading {
+  0%   { transform: rotate(0deg); }
+  10%  { transform: rotate(0deg) scale(0.85); }
+  20%  { transform: rotate(0deg) scale(1); }
+  90%  { transform: rotate(360deg) scale(1); }
+  100% { transform: rotate(360deg) scale(1); }
 }
 
 #elsewhere {
   .loading .circle {
     -webkit-animation: loading 1.5s infinite ease;
+    -moz-animation: loading 1.5s infinite ease;
+    animation: loading 1.5s infinite ease;
   }
   
   h3 {
     text-align: center;
-    &:after {
+    &::after {
       content: "≡";
       display: block;
     }
@@ -263,12 +277,12 @@ p.lead {
           float: right;
           margin-left: 0.5em;
 
-          &.favorites:before {
+          &.favorites::before {
             content: "★";
             color: $YELLOW;
           }
 
-          &.retweets:before {
+          &.retweets::before {
             content: "⟳";
             color: $BLUE;
           }
@@ -333,7 +347,7 @@ p.lead {
         overflow: visible;
         border: none;
         
-        &.now-playing .pull-left:before {
+        &.now-playing .pull-left::before {
           content: "\e072";
           font-family: 'Glyphicons Halflings';
           font-style: normal;
@@ -366,7 +380,7 @@ p.lead {
         height: 226px;
         margin-left: -10px;
         
-        &:after {
+        &::after {
           content: "";
           position: absolute;
           top: 0;
@@ -449,12 +463,13 @@ body > blockquote {
     margin-right: auto;
     max-width: 40em;
     
-    &:before, &:after {
+    &::before,
+    &::after {
       font-weight: 900;
     }
     
-    &:before { content: "“"; }
-    &:after  { content: "”"; }
+    &::before { content: "“"; }
+    &::after  { content: "”"; }
   }
   
   small {
@@ -463,7 +478,7 @@ body > blockquote {
     letter-spacing: 0.2em;
   }
   
-  small:before { display: none; }
+  small::before { display: none; }
 }
 
 footer {
@@ -486,7 +501,7 @@ footer {
     }
   }
   
-  &:after {
+  &::after {
     content: "● ●";
     background: black;
     color: $YELLOW;
@@ -517,6 +532,8 @@ footer {
   background: rgba(0, 0, 0, 0.75);
   opacity: 0;
   -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
   
   &.in {
     opacity: 1;
@@ -529,6 +546,8 @@ footer {
     width: 100%;
     height: 100%;
     -webkit-transition: left 1s ease;
+    -moz-transition: left 1s ease;
+    transition: left 1s ease;
     
     .page {
       position: absolute;
@@ -536,22 +555,54 @@ footer {
       top: 0;
       width: 100%;
       height: 100%;
-    }
-  }
+      
+      &.loading::before {
+        content: "\e031";
+        font-family: 'Glyphicons Halflings';
+        font-size: 600%;
+        color: rgba(white, 0.75);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -0.75em;
+        line-height: 1.5em;
+        width: 1.5em;
+        vertical-align: middle;
+        text-align: center;
+        -webkit-animation: loading 1.5s infinite ease;
+        -moz-animation: loading 1.5s infinite ease;
+        animation: loading 1.5s infinite ease;
+      }
+
+      img {
+        max-height: 80%;
+        max-width: 80%;
+        height: auto;
+        width: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        box-shadow: 0 0 20px rgba(black, 0.5);
+        opacity: 0;
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+      }
   
-  img {
-    max-height: 80%;
-    width: auto;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    box-shadow: 0 0 20px rgba(black, 0.5);
+      &:not(.loading) {
+        img {
+          opacity: 1;
+        }
+      }
+    }
   }
   
   a {
     text-decoration: none;
     opacity: 0.25;
     -webkit-transition: opacity 0.25s ease;
+    -moz-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
 
     &:hover {
       opacity: 0.75;
