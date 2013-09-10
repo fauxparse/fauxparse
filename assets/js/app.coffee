@@ -167,7 +167,7 @@ $ ->
     li = $("<li>")
     $("<p>").html(linkifyTweet(tweet)).appendTo li
     meta = $("<small>").appendTo li
-    $("<a>", href: "", text: tweet.time, target: "_blank").appendTo meta
+    $("<a>", href: "https://twitter.com/fauxparse/status/#{tweet.id}", text: tweet.time, target: "_blank").appendTo meta
     if tweet.retweet_count
       meta.append "<span><i class=\"glyphicon glyphicon-retweet\"></i> #{tweet.retweet_count}</span>"
     if tweet.favorite_count

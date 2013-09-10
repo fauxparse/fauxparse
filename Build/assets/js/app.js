@@ -255,7 +255,7 @@
       $("<p>").html(linkifyTweet(tweet)).appendTo(li);
       meta = $("<small>").appendTo(li);
       $("<a>", {
-        href: "",
+        href: "https://twitter.com/fauxparse/status/" + tweet.id,
         text: tweet.time,
         target: "_blank"
       }).appendTo(meta);
