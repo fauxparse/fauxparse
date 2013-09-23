@@ -110,7 +110,7 @@ $ ->
       for filename, i in images
         if i % 6 is 0
           row?.appendTo container
-          row = $("<div>").addClass row
+          row = $("<div>").addClass "row"
         
         div = $("<div>")
           .addClass("col-xs-2")

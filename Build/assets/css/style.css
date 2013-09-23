@@ -52,6 +52,10 @@ p.lead {
   text-indent: -99em;
   text-decoration: none;
   overflow: hidden; }
+  @media (max-width: 480px) {
+    .circle {
+      width: 4em;
+      height: 4em; } }
 
 .circle[rel="twitter"],
 .circle[rel="lastfm"],
@@ -119,16 +123,15 @@ p.lead {
     text-decoration: none;
     overflow: hidden;
     margin: 2em auto 0; }
+    @media (max-width: 480px) {
+      #code::before {
+        width: 4em;
+        height: 4em; } }
 
 #theatre {
   color: #ec008c;
   padding-bottom: 4em;
   overflow: hidden; }
-  #theatre a {
-    background: #ec008c;
-    color: white;
-    padding: 0 0.25em;
-    text-decoration: none; }
   #theatre dl dt {
     font-weight: 900;
     text-transform: uppercase; }
@@ -148,7 +151,8 @@ p.lead {
         background-color: rgba(236, 0, 140, 0.1);
         color: #ec008c;
         margin-left: -0.25em;
-        border-radius: 0.25em; }
+        border-radius: 0.25em;
+        padding: 0 0.25em; }
   #theatre::before {
     content: "";
     display: block;
@@ -162,6 +166,10 @@ p.lead {
     text-decoration: none;
     overflow: hidden;
     margin: 2em auto 0; }
+    @media (max-width: 480px) {
+      #theatre::before {
+        width: 4em;
+        height: 4em; } }
 
 #design {
   background: #fff200;
@@ -181,9 +189,16 @@ p.lead {
     overflow: hidden;
     opacity: 0.85;
     margin: 2em auto 0; }
+    @media (max-width: 480px) {
+      #design::before {
+        width: 4em;
+        height: 4em; } }
   #design .thumbnails img {
     display: block;
     margin-bottom: 30px; }
+  @media (max-width: 480px) {
+    #design .thumbnails .col-xs-2 {
+      width: 33.333333333%; } }
 
 @-webkit-keyframes loading {
   0% {

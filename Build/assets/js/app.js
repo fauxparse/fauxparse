@@ -180,7 +180,7 @@
           if (row != null) {
             row.appendTo(container);
           }
-          row = $("<div>").addClass(row);
+          row = $("<div>").addClass("row");
         }
         div = $("<div>").addClass("col-xs-2").appendTo(row);
         $("<img>", {

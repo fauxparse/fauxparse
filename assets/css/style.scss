@@ -70,6 +70,10 @@ p.lead {
   text-indent: -99em;
   text-decoration: none;
   overflow: hidden;
+  @media (max-width: 480px) {
+    width: 4em;
+    height: 4em;
+  }
 }
 
 .circle {
@@ -138,13 +142,6 @@ p.lead {
   padding-bottom: 4em;
   overflow: hidden;
   
-  a {
-    background: $PINK;
-    color: white;
-    padding: 0 0.25em;
-    text-decoration: none;
-  }
-
   dl {
     dt {
       font-weight: 900;
@@ -174,6 +171,7 @@ p.lead {
           color: $PINK;
           margin-left: -0.25em;
           border-radius: 0.25em;
+          padding: 0 0.25em;
         }
       }
     }
@@ -202,6 +200,12 @@ p.lead {
     img {
       display: block;
       margin-bottom: 30px;
+    }
+    
+    @media (max-width:480px) {
+      .col-xs-2 {
+        width: 33.333333333%;
+      }
     }
   }
 }
