@@ -177,6 +177,17 @@ p.lead {
     }
   }
   
+  .blog-link {
+    background: white;
+    padding-top: 10px;
+    color: $BLACK;
+    img {
+      height: 4.5em;
+      width: auto;
+      border-radius: 50%;
+    }
+  }
+  
   &::before {
     content: "";
     @include circle($PINK, url(icons.png), 50%);
