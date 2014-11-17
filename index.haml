@@ -1,0 +1,423 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    / @reload
+    %link{:href => "http://fonts.googleapis.com/css?family=Raleway:900,300", :rel => "stylesheet", :type => "text/css"}/
+    / @stylesheet bootstrap style
+    %link{:href => "//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css", :rel => "stylesheet"}/
+    %link{:href => "<!-- @path favicon.ico -->", :rel => "shortcut icon"}/
+    %title Matt Powell ≡ fauxpar.se
+    %meta{:content => "559955259", :property => "fb:admins"}/
+    %meta{:content => "Matt Powell", :property => "og:title"}/
+    %meta{:content => "website", :property => "og:type"}/
+    %meta{:content => "http://fauxpar.se", :property => "og:url"}/
+    %meta{:content => "http://fauxpar.se/assets/img/facebook.jpg", :property => "og:image"}/
+    %meta{:content => "http://fauxpar.se/assets/img/orko.png", :property => "og:image"}/
+    %meta{:content => "Matt Powell is a designer, writer, director, improviser, and web developer from Christchurch, New Zealand.", :property => "og:description"}/
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-22621055-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+  %body
+    %section#top.full-height
+      .container
+        .row
+          .col-xs-4
+            %a.circle{:href => "#code", :rel => "code"} Code
+          .col-xs-4
+            %a.circle{:href => "#theatre", :rel => "theatre"} Theatre
+          .col-xs-4
+            %a.circle{:href => "#design", :rel => "design"} Design
+    %section#home.full-height
+      .container
+        %h1 Matt Powell
+      %a.image-attribution{:href => "http://www.emmabrittenden.co.nz/"} Image by Emma Brittenden
+    %blockquote
+      .container
+        %p Matt is a creative guru. The quality and flair of his graphic design makes ham‑fisted amateurs, like myself, want to give up. Leave it to the professionals.
+        %small
+          %a{:href => "http://nz.linkedin.com/pub/matthew-journee/5/72b/722"} Matthew Journee
+    %section#intro
+      .container
+        .row
+          %h2.col-sm-10.col-sm-offset-1 Matt Powell is a designer, writer, director, improviser, and web developer from Christchurch, New Zealand.
+        .row
+          .col-sm-4
+            %p
+              By day, I develop web application interfaces for
+              = succeed "." do
+                %a{:href => "http://www.sli-systems.com/"} SLI Systems
+              %a{:href => "http://coffeescript.org/"} CoffeeScript
+              and
+              = succeed "," do
+                %a{:href => "http://sass-lang.com/"} SASS
+              which help me to get the mechanics of web development out of the way of designing applications people are going to use because they
+              %em want
+              to, not because they
+              %em have
+              to. I’m also spending a lot of time with the awesome
+              %a{:href => "http://getbootstrap.com"} Bootstrap
+              framework. SLI is a great company to work for, and the work provides plenty of interesting challenges. You should definitely work here.
+          .col-sm-4
+            %p
+              Outside of work, I do as much theatre as I can. I’ve been a member of
+              %a{:href => "http://www.courtjesters.co.nz"} The Court Jesters
+              (a late-night improv, comedy, and corporate entertainment company) since 2002, and you can often see me on stage in Scared Scriptless at
+              = succeed "." do
+                %a{:href => "http://www.courttheatre.org.nz"} The Court Theatre
+              = succeed "," do
+                %a{:href => "http://malthouse.co.nz"} Canterbury Children’s Theatre
+          .col-sm-4
+            %p Ever since I can remember, I’ve been obsessed with presenting my work in a way that will fascinate, inspire, and delight. I create original illustrated posters, flyers, advertisements, and websites for pretty much everything I’m involved in. As well as more conventional, ‘cartoony’ illustration, I like experimenting with minimalism and geometry: how many shapes do you need to recognise a particular film character, for example? Can I draw a troll with just two and a half circles? (Yes. Kind of.)
+        .row
+          .col-xs-4
+            %a.circle{:href => "#code", :rel => "code"} Code
+          .col-xs-4
+            %a.circle{:href => "#theatre", :rel => "theatre"} Theatre
+          .col-xs-4
+            %a.circle{:href => "#design", :rel => "design"} Design
+    %blockquote
+      %p [Matt’s] code and coding practices are some of the cleanest and brightest I’ve seen.
+      %small
+        %a{:href => "http://nz.linkedin.com/in/juliansuggate"} Julian Suggate
+    %section#code
+      .container
+        .row
+          %h2.col-sm-10.col-sm-offset-1 Code and user interface design
+        .row
+          .col-md-4
+            %p There isn’t a lot I can show you here right now. Most of the interface design work I am involved with ends up behind password-protection on proprietary applications. Back when I was doing commercial web design, I did have a few examples I was really proud of, but it's been a while, and they’ve mostly moved on. The 2011 Christchurch earthquake even managed to find a way to put paid to one of my favourite sites: the site itself was fine, but the warehouse was demolished and they had nowhere to house their stock.
+            %p
+              I'll try and find some time to curate something a little more germane; in the meantime, I suppose you could pick through
+              = succeed "." do
+                %a{:href => "http://github.com/fauxparse"} my Github profile
+          .col-md-4
+            %img.screenshot{:alt => "Playtime", :src => "<!-- @path playtime.png -->"}/
+          .col-md-4
+            %p
+              This screenshot is from
+              = succeed "," do
+                %em Playtime
+              %a{:href => "http://courtjesters.co.nz"} The Court Jesters
+              to manage casting and statistics. Because we have a stable of around 20 performers, all of whom have busy schedules and commitments around the country, and two shows a week, we needed a way of keeping track of who is available for any given show. Any one of us can log in and mark down our availability on the calendar, and then the MC for that weekend’s shows can select a cast from the available players. This also gives us access to several years of statistics, all in a handy, responsive interface that is optimised for use on phones and tablets. Playtime uses
+              = succeed "," do
+                %a{:href => "http://rubyonrails.org/"} Rails
+              = succeed "," do
+                %a{:href => "mongodb.org"} Mongodb
+              = succeed "," do
+                %a{:href => "http://spinejs.com"} Spine
+              = succeed "." do
+                %a{:href => "http://heroku.com"} Heroku
+    %blockquote
+      %p …the suave Matt Powell cruises up to the mic… and boy does he nail it!
+      %small
+        John Smythe,
+        %a{:href => "http://www.theatreview.org.nz/reviews/review.php?id=6312"} Theatreview
+    %section#theatre
+      .container
+        .row
+          %h2.col-sm-10.col-sm-offset-1 Theatre and writing
+        .row
+          .col-sm-10.col-sm-offset-1
+            %p.lead
+              For more information about these shows, or to request a script, please
+              = succeed "." do
+                %a{:href => "mailto:fauxparse@gmail.com"} email me
+        .row
+          .col-md-4
+            %h3 Plays for young audiences
+            %dl
+              %dt
+                Space Mouse, Underwater Mouse
+                %small 2014
+              %dd
+                A silent play for children based on the story of the Town Mouse and the Country Mouse
+                = succeed "." do
+                  %small
+                    %a{:href => "http://www.malthouse.co.nz"} Canterbury Children’s Theatre
+              %dt
+                Alice’s Adventures In Wonderland
+                %small 2013
+              %dd
+                A modern adaptation of the Lewis Carroll classic, with all your favourite characters.
+                %small
+                  %a{:href => "http://www.malthouse.co.nz"} Canterbury Children’s Theatre
+              %dt
+                Cinderella
+                %small 2011
+              %dd
+                Think you know the story of Cinderella? What happens if she doesn’t
+                %em want
+                to go to the ball or marry the prince? What happens if she just wants to design shoes?
+                %small
+                  %a{:href => "http://www.malthouse.co.nz"} Canterbury Children’s Theatre
+              %dt
+                Slow Runnings: A Tortoise And Hare Story
+                %small 2013
+              %dd
+                The classic tale of hubris, one-upmanship, and training montages.
+                %small
+                  %a{:href => "http://www.malthouse.co.nz"} Canterbury Children’s Theatre
+              %dt
+                Stone Soup
+                %small 2012
+              %dd
+                The classic folk tale retold with a large cast. Watch for famous cameos!
+                %small
+                  %a{:href => "http://www.malthouse.co.nz"} Canterbury Children’s Theatre
+              %dt
+                The Comedy of Whiskers
+                %small 2009
+              %dd
+                A tale of mistaken identity, cats, and rabbits. Inspired by William Shakespeare’s
+                = succeed "." do
+                  %cite Comedy Of Errors
+                %small
+                  %a{:href => "http://www.malthouse.co.nz"} Canterbury Children’s Theatre
+              %dt
+                The Magic Island
+                %small 2008
+              %dd
+                A story about magic, responsibility, and choice. Based on William Shakespeare’s
+                = succeed "." do
+                  %cite Tempest
+                %small
+                  %a{:href => "http://www.courttheartre.org.nz"} The Court Theatre
+          .col-md-4
+            %h3 One-act plays for adults
+            %dl
+              %dt
+                Countdown
+                %small 2013
+              %dd
+                Olive doesn’t know if there’s such a thing as love at first sight, but she’s pretty sure that if there is, you can't get it at Countdown.
+                %small
+                  %a{:href => "https://www.facebook.com/Dramasoc"} Dramasoc
+                  3some
+              %dt
+                Fetch
+                %small 2013
+              %dd
+                A look at the implications of thermodynamics and relativity inside the world of a fantasy MMORPG. Contains cultists, stabbings, and Nourishing Bread.
+                %small
+                  %a{:href => "https://www.facebook.com/Dramasoc"} Dramasoc
+                  Day To Play
+              %dt
+                Nice Chinese Boy
+                %small 2012
+              %dd
+                Boy meets girl, on a date boy’s mother has arranged with girl’s mother, because neither boy nor girl is getting any younger.
+                %small
+                  %a{:href => "https://www.facebook.com/Dramasoc"} Dramasoc
+                  Day To Play
+              %dt
+                God Of Grace
+                %small 2011
+              %dd
+                The Rapture is coming, but there might be time to save the boy you love if you tie him to a chair in your basement.
+                %small
+                  %a{:href => "https://www.facebook.com/Dramasoc"} Dramasoc
+                  Day To Play
+              %dt
+                The Art Of Letting Go
+                %small 2010
+              %dd
+                What happens when someone you loved and lost comes back.
+                %small
+                  %a{:href => "http://courttheatre.org.nz"} Court Theatre
+                  Young Playwrights’ Initiative
+              %dt
+                Wait
+                %small 2010
+              %dd
+                Tom’s always thought himself too clever for a serious relationship. Until now.
+                %small
+                  %a{:href => "https://www.facebook.com/Dramasoc"} Dramasoc
+                  Day To Play
+          .col-md-4
+            %h3 Reviews
+            %dl.reviews
+              %dt
+                Space Patrol 5 @
+                %a{:href => "http://nzimprovfestival.co.nz"} NZIF
+              %dd
+                %a{:href => "http://www.theatreview.org.nz/reviews/review.php?id=7590"} Theatreview, 2 November 2014
+              %dt
+                Sylvestro’s Spooky Cabaret Burlesque @
+                %a{:href => "http://nzimprovfestival.co.nz"} NZIF
+              %dd
+                %a{:href => "http://www.theatreview.org.nz/reviews/review.php?id=7587"} Theatreview, 1 November 2014
+              %dt
+                Duos: A Couple Of Dicks @
+                %a{:href => "http://nzimprovfestival.co.nz"} NZIF
+              %dd
+                %a{:href => "http://www.theatreview.org.nz/reviews/review.php?id=7588"} Theatreview, 1 November 2014
+              %dt
+                The Good God Singalong @
+                %a{:href => "http://nzimprovfestival.co.nz"} NZIF
+              %dd
+                %a{:href => "http://www.theatreview.org.nz/reviews/review.php?id=7583"} Theatreview, 31 October 2014
+              %dt
+                Bingo Board Of Doom @
+                %a{:href => "http://nzimprovfestival.co.nz"} NZIF
+              %dd
+                %a{:href => "http://www.theatreview.org.nz/reviews/review.php?id=7564"} Theatreview, 29 October 2014
+              %dt
+                Here’s A Thing @
+                %a{:href => "http://nzimprovfestival.co.nz"} NZIF
+              %dd
+                %a{:href => "http://www.theatreview.org.nz/reviews/review.php?id=7565"} Theatreview, 29 October 2014
+              %dt
+                Stuck In The Middle @
+                %a{:href => "http://nzimprovfestival.co.nz"} NZIF
+              %dd
+                %a{:href => "http://www.theatreview.org.nz/reviews/review.php?id=6314"} Theatreview, 22 September 2013
+              %dt
+                Choral Grief @
+                %a{:href => "http://nzimprovfestival.co.nz"} NZIF
+              %dd
+                %a{:href => "http://www.theatreview.org.nz/reviews/review.php?id=6313"} Theatreview, 22 September 2013
+              %dt
+                The Vance Fontaine Big Band Happy Hour @
+                %a{:href => "http://nzimprovfestival.co.nz"} NZIF
+              %dd
+                %a{:href => "http://www.theatreview.org.nz/reviews/review.php?id=6312"} Theatreview, 21 September 2013
+              %dt
+                The 121 Connection @
+                %a{:href => "http://nzimprovfestival.co.nz"} NZIF
+              %dd
+                %a{:href => "http://www.theatreview.org.nz/reviews/review.php?id=6311"} Theatreview, 21 September 2013
+              %dt
+                Pundemonium @
+                %a{:href => "http://nzimprovfestival.co.nz"} NZIF
+              %dd
+                %a{:href => "http://www.theatreview.org.nz/reviews/review.php?id=6304"} Theatreview, 20 September 2013
+              %dt
+                Time Lord @
+                %a{:href => "http://nzimprovfestival.co.nz"} NZIF
+              %dd
+                %a{:href => "http://www.theatreview.org.nz/reviews/review.php?id=6309"} Theatreview, 20 September 2013
+              %dt
+                Loose Cannons @
+                %a{:href => "http://nzimprovfestival.co.nz"} NZIF
+              %dd
+                %a{:href => "http://www.theatreview.org.nz/reviews/review.php?id=6299"} Theatreview, 19 September 2013
+              %dt
+                Opening Crumpet @
+                %a{:href => "http://nzimprovfestival.co.nz"} NZIF
+              %dd
+                %a{:href => "http://www.theatreview.org.nz/reviews/review.php?id=6293"} Theatreview, 18 September 2013
+    %section#improv
+      .container
+        .row
+          .col-sm-10.col-sm-offset-1
+            %h2 Improv
+            %p
+              I create, perform, and teach improvised theatre, and keep a
+              = succeed "," do
+                %a{:href => "http://improbserver.tumblr.com/"} little improv blog
+              which I update every day. I am available to come and teach your group,
+              and have the following workshops ready to go:
+        .row.workshops
+          %article.col-md-4
+            %h3
+              The Other 90%
+              %small Body language in improvisation
+            %p
+              So much of human communication is non-verbal, and yet we rely
+              so heavily on words to shape our scene work. This workshop helps you
+              unlock the body language you already know for use within your improvisation,
+              leading to better connection with your scene partners, and more natural scenes.
+          %article.col-md-4
+            %h3
+              En Pointe
+              %small Dance like an improvisor, improvise like a dancer
+            %p
+              Go beyond the burly-men-in-tutus comedy approach to improvised ballet,
+              and discover ways to use ballet as a graceful and sophisticated storytelling tool,
+              even with no prior training. Covers principles of balletic style, balletic mime,
+              and sweet tricks like lifts and synchronised chorus work.
+          %article.col-md-4
+            %h3
+              Fine Tuning
+              %small Directing improvised work
+            %p
+              Even for beginning improvisors, directing is a very useful way
+              to learn to analyse the structure and content of a scene,
+              and to discover what inspires you as a performer.
+              This workshop covers both directing and accepting direction gracefully,
+              with an emphasis on practical application through directed scene work.
+        .row
+          .col-sm-10.col-sm-offset-1
+            %p
+              If you’d like to book me to teach any of these workshops,
+              or you have something else in mind, please
+              = succeed "!" do
+                %a{:href => "mailto:fauxparse@gmail.com"} get in touch
+              I love working with new people.
+    %blockquote
+      %p Oh man, check out this guy’s pencil case!
+      %small
+        %a{:href => "http://www.imdb.com/name/nm0535741"} Robbie Magasiva
+    %section#design
+      .container
+        .row
+          %h2.col-sm-10.col-sm-offset-1 Design and illustration
+        .thumbnails
+    %blockquote
+      %p Matt sent me a whole lot of squiggly lines and strange words and I pasted it into my site and everything looked better.
+      %small
+        %a{:href => "http://www.emmabrittenden.co.nz/"} Emma Brittenden
+    %section#elsewhere
+      .container
+        .row
+          %h2.col-sm-10.col-sm-offset-1 Elsewhere
+        .row
+          .twitter.loading.col-sm-4
+            %a.circle{:href => "http://twitter.com/fauxparse", :rel => "twitter"} Twitter
+            %ul.tweets
+          .lastfm.loading.col-sm-4
+            %a.circle{:href => "http://last.fm/user/fauxparse", :rel => "lastfm"} Last.fm
+            %ul.recent
+            %ul.albums
+          .instagram.loading.col-sm-4
+            %a.circle{:href => "http://instagram.com/fauxparse", :rel => "instagram"} Instagram
+            %ul.photos
+    %section#portrait.full-height
+    %footer
+      .container
+        .row.vcard
+          .col-sm-4.col-sm-offset-8
+            %p.copyright
+              © 2013
+              = succeed "," do
+                %a.url.fn{:href => "http://fauxpar.se"} Matt Powell
+              %span.adr
+                %span.locality> Christchurch
+                ,
+                = succeed "." do
+                  %span.country-name New Zealand
+            %dl
+              %dt Email
+              %dd
+                %a.email{:href => "mailto:fauxparse@gmail.com"} fauxparse@gmail.com
+              %dt Twitter
+              %dd
+                %a.twitter{:href => "http://twitter.com/fauxparse"} @fauxparse
+              %dt LinkedIn
+              %dd
+                %a.linkedin{:href => "http://nz.linkedin.com/in/fauxparse"} View my profile
+    / @javascript jquery smooth bootstrap app
+    :javascript
+      setTimeout(function(){var a=document.createElement("script");
+      var b=document.getElementsByTagName("script")[0];
+      a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0020/6462.js?"+Math.floor(new Date().getTime()/3600000);
+      a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);

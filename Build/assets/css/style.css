@@ -180,6 +180,24 @@ p.lead {
         width: 4em;
         height: 4em; } }
 
+#improv {
+  background: #ec008c;
+  color: white;
+  padding-bottom: 1em; }
+  #improv a {
+    color: #fff200; }
+  #improv .workshops {
+    margin-bottom: 1em; }
+  #improv h3 {
+    text-align: center; }
+    #improv h3 small {
+      display: block;
+      text-transform: uppercase;
+      font-size: 50%;
+      color: white;
+      margin-top: 0.5em;
+      opacity: 0.75; }
+
 #design {
   background: #fff200;
   padding-bottom: 4em;

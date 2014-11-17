@@ -46,7 +46,7 @@ p.lead {
     line-height: 1.0em;
     letter-spacing: 0.1em;
   }
-  
+
   a.image-attribution {
     position: absolute;
     bottom: 0;
@@ -102,18 +102,18 @@ p.lead {
     content: "≡";
     display: block;
   }
-  
+
 }
 
 #code {
   background: $BLUE;
   color: $WALL;
   overflow: hidden;
-  
+
   .screenshot {
     width: 100%;
     height: auto;
-    
+
     @media (max-width: 991px) {
       float: right;
       width: 25%;
@@ -121,32 +121,32 @@ p.lead {
       margin-left: 20px;
     }
   }
-  
+
   a {
     color: $YELLOW;
     &:hover {
       color: darken($YELLOW, 5%);
     }
   }
-  
+
   &::before {
     content: "";
     @include circle($BLUE, url(icons.png), 0%);
     margin: 2em auto 0;
   }
-  
+
 }
 
 #theatre {
   color: $PINK;
   padding-bottom: 4em;
   overflow: hidden;
-  
+
   dl {
     dt {
       font-weight: 900;
       text-transform: uppercase;
-      
+
       small {
         font-size: 100%;
         font-weight: 300;
@@ -155,17 +155,17 @@ p.lead {
         border-left: 1px solid rgba($PINK, 0.25);
       }
     }
-    
+
     dd {
       margin-bottom: 0.5em;
-      
+
       cite {
         text-decoration: underline;
       }
-      
+
       small {
         display: block;
-        
+
         a {
           background-color: rgba($PINK, 0.1);
           color: $PINK;
@@ -176,7 +176,7 @@ p.lead {
       }
     }
   }
-  
+
   .blog-link {
     background: white;
     padding-top: 10px;
@@ -187,7 +187,7 @@ p.lead {
       border-radius: 50%;
     }
   }
-  
+
   &::before {
     content: "";
     @include circle($PINK, url(icons.png), 50%);
@@ -195,24 +195,51 @@ p.lead {
   }
 }
 
+#improv {
+  background: $PINK;
+  color: white;
+  padding-bottom: 1em;
+
+  a {
+    color: $YELLOW;
+  }
+
+  .workshops {
+    margin-bottom: 1em;
+  }
+
+  h3 {
+    text-align: center;
+
+    small {
+      display: block;
+      text-transform: uppercase;
+      font-size: 50%;
+      color: white;
+      margin-top: 0.5em;
+      opacity: 0.75;
+    }
+  }
+}
+
 #design {
   background: $YELLOW;
   padding-bottom: 4em;
   overflow: hidden;
-  
+
   &::before {
     content: "";
     @include circle($YELLOW, url(icons-black.png), 100%);
     opacity: 0.85;
     margin: 2em auto 0;
   }
-  
+
   .thumbnails {
     img {
       display: block;
       margin-bottom: 30px;
     }
-    
+
     @media (max-width:480px) {
       .col-xs-2 {
         width: 33.333333333%;
@@ -251,7 +278,7 @@ p.lead {
     -moz-animation: loading 1.5s infinite ease;
     animation: loading 1.5s infinite ease;
   }
-  
+
   h3 {
     text-align: center;
     &::after {
@@ -259,35 +286,35 @@ p.lead {
       display: block;
     }
   }
-  
+
   .tweets {
     list-style: none;
     margin: 0;
     padding: 0 0 2em;
-    
+
     li {
       display: block;
       margin: 0;
       padding: 0.5em 0;
       border-top: 1px solid #eee;
-      
+
       p {
         margin-bottom: 0.25em;
       }
-      
+
       &:first-child {
         font-size: 150%;
         border-top: none;
         padding-top: 0;
       }
-      
+
       small {
         color: #999;
-        
+
         a {
           color: inherit;
         }
-        
+
         span {
           float: right;
           margin-left: 0.5em;
@@ -305,13 +332,13 @@ p.lead {
       }
     }
   }
-  
+
   .photos {
     list-style: none;
     margin: 0;
     padding: 0 0 2em;
     overflow: hidden;
-    
+
     li {
       display: block;
       margin: 0;
@@ -322,14 +349,14 @@ p.lead {
         width: 20%;
         &:nth-child(11), &:nth-child(12) { display: none; }
       }
-      
+
       img {
         max-width: 100%;
         height: auto;
       }
     }
   }
-  
+
   .lastfm {
     .media {
       border-top: 1px solid #eee;
@@ -339,7 +366,7 @@ p.lead {
         font-size: 100%;
         margin: 0 0 0.25em;
       }
-      
+
       h5 {
         text-transform: uppercase;
         letter-spacing: 0.2em;
@@ -348,12 +375,12 @@ p.lead {
         font-size: 85.7142857%;
       }
     }
-    
+
     .recent {
       margin: 0 auto 1em;
       padding: 0;
       width: 236px;
-      
+
       .media {
         display: block;
         position: relative;
@@ -361,7 +388,7 @@ p.lead {
         padding: 0;
         overflow: visible;
         border: none;
-        
+
         &.now-playing .pull-left::before {
           content: "\e072";
           font-family: 'Glyphicons Halflings';
@@ -386,7 +413,7 @@ p.lead {
         }
 
       }
-      
+
       .pull-left {
         display: block;
         float: none !important;
@@ -394,7 +421,7 @@ p.lead {
         width: 256px;
         height: 226px;
         margin-left: -10px;
-        
+
         &::after {
           content: "";
           position: absolute;
@@ -406,7 +433,7 @@ p.lead {
           background-size: cover;
           opacity: 0.5;
         }
-        
+
         img {
           position: absolute;
           left: 35px;
@@ -415,25 +442,25 @@ p.lead {
           height: 204px;
         }
       }
-      
+
       .media-body {
         padding: 0 12px;
-        
+
         h4 {
           font-size: 150%;
         }
-        
+
         h5 {
           color: #999;
         }
       }
     }
-    
+
     .albums {
       margin: 0 0 1em;
       padding: 0;
       list-style: none;
-      
+
       img {
         display: block;
         max-width: 64px;
@@ -450,7 +477,7 @@ p.lead {
   left: 0;
   right: 0;
   background: url(me.jpg) no-repeat 55% 100%;
-  
+
   @media (max-width: 600px) {
     background-size: contain;
   }
@@ -471,28 +498,28 @@ body > blockquote {
   font-weight: 900;
   text-shadow: 0 -1px 0 black;
   margin: 0;
-  
+
   p {
     font-size: 150%;
     margin-left: auto;
     margin-right: auto;
     max-width: 40em;
-    
+
     &::before,
     &::after {
       font-weight: 900;
     }
-    
+
     &::before { content: "“"; }
     &::after  { content: "”"; }
   }
-  
+
   small {
     font-size: 150%;
     text-transform: uppercase;
     letter-spacing: 0.2em;
   }
-  
+
   small::before { display: none; }
 }
 
@@ -501,11 +528,11 @@ footer {
   padding: 20px 0;
   color: rgba(255, 255, 255, 0.25);
   position: relative;
-  
+
   a, a:hover {
     color: rgba(255, 255, 255, 0.5);
   }
-  
+
   dl {
     overflow: hidden;
     dt {
@@ -515,7 +542,7 @@ footer {
       width: 5em;
     }
   }
-  
+
   &::after {
     content: "● ●";
     background: black;
@@ -532,7 +559,7 @@ footer {
     vertical-align: bottom;
     font-weight: 900;
     font-size: 200%;
-    
+
     @media (max-width: 768px) { display: none; }
   }
 }
@@ -549,11 +576,11 @@ footer {
   -webkit-transition: opacity 0.5s ease;
   -moz-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
-  
+
   &.in {
     opacity: 1;
   }
-  
+
   .pages {
     position: absolute;
     left: 0;
@@ -563,14 +590,14 @@ footer {
     -webkit-transition: left 1s ease;
     -moz-transition: left 1s ease;
     transition: left 1s ease;
-    
+
     .page {
       position: absolute;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
-      
+
       &.loading::before {
         content: "\e031";
         font-family: 'Glyphicons Halflings';
@@ -603,7 +630,7 @@ footer {
         -moz-transition: opacity 1s ease;
         transition: opacity 1s ease;
       }
-  
+
       &:not(.loading) {
         img {
           opacity: 1;
@@ -611,7 +638,7 @@ footer {
       }
     }
   }
-  
+
   a {
     text-decoration: none;
     opacity: 0.25;
@@ -623,7 +650,7 @@ footer {
       opacity: 0.75;
     }
   }
-  
+
   a[rel="prev"],
   a[rel="next"] {
     position: absolute;
@@ -640,7 +667,7 @@ footer {
     margin: -0.75em 0;
     z-index: 1;
     text-decoration: none;
-    
+
     .glyphicon {
       display: block;
       line-height: 1.4em;
@@ -648,15 +675,15 @@ footer {
       top: 0;
     }
   }
-  
+
   a[rel="prev"] {
     left: -0.25em;
   }
-  
+
   a[rel="next"] {
     right: -0.25em;
   }
-  
+
   a[rel="close"] {
     position: absolute;
     top: 0;
